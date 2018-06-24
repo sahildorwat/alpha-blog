@@ -1,0 +1,17 @@
+<h1> Edit an article </h1>
+
+
+
+<%=form_for @article do |f|%>
+<P><%=f.label :title %><br>
+<%= f.text_field :title%>
+</p>
+<p>
+<%=f.label :description %><br>
+<%= f.text_area :description%>
+</P>
+<%=f.submit%>
+<%end%>
+
+
+<p> <%= link_to 'Back to articles', articles_path%><p>
