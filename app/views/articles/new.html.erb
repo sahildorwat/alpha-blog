@@ -1,23 +1,2 @@
 <h1> Create an article </h1>
-
-<ul>
-    <% if @article.errors.any? %>
-        <h2> Follwing errors are in the form : </h2>
-        <% @article.errors.full_messages.each do |error| %>
-            <li> <%=error%></li>
-        <%end%>
-    <%end%>
-</ul>
-
-<%=form_for @article do |f|%>
-<P><%=f.label :title %><br>
-<%= f.text_field :title%>
-</p>
-<p>
-<%=f.label :description %><br>
-<%= f.text_area :description%>
-</P>
-<%=f.submit%>
-<%end%>
-
-<p> <%= link_to 'Back to articles', articles_path%><p>
+<%= render 'form'%>
