@@ -8,6 +8,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  
+  <ul>
+    <%flash.each do |name, msg|%>
+      <li><%= msg%></li>
+    <%end%>
+  </ul>
 
   <body>
     <%= yield %>
