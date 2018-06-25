@@ -11,7 +11,7 @@
                     <ul>
                      
                         <h2> Follwing errors are in the form : </h2>
-                        <% obj.full_messages.each do |error| %>
+                        <% obj.errors.full_messages.each do |error| %>
                             <li> <%=error%></li>
                         <%end%>
                     <ul>
