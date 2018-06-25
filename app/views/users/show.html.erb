@@ -6,7 +6,12 @@
     </div>
 </div>
 
-
+<div class="center">
+    <%= will_paginate @articles%>
+</div>
 <div class="container">
     <%= render '/articles/article', obj: @articles%>
+</div>
+<div class="center">
+    <%= will_paginate @articles%>
 </div>
