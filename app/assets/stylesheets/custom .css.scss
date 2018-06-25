@@ -1,2 +1,29 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.jumbotron {
+    height: 500px;
+}
+#logo {
+    float: left;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    margin-bottom: -50px;
+    border-top: 1mm solid black;
+}
+footer ul{
+    float: right;
+    list-style: none;
+}
