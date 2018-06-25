@@ -1,3 +1,18 @@
+<%if @article.user%>
+    <% user = @article.user %>
+    <div class= "center">
+        <div class="listings">
+            <div= "row">
+                <ul class="well col-xs-4 col-xs-offset-4">
+                    <li><%= link_to gravtar_for(user, 90), user_path(user) %></li>
+                    <li class="article-title"><%= link_to user.username, user_path  %> </li>
+                    <li> <small> <%= pluralize(user.articles.count, "article") if user.articles %>    
+                <ul> 
+            </div>
+        </div>
+    </div>
+<%end%>
+
 
 <h2 align="center">title is : <%= @article.title%> </h2>
 <div class="well col-xs-8 col-xs-offset-2">
