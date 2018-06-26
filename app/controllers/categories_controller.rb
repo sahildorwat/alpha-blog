@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-
+    before_action :checkAdmin, except: [:show, :index]
+    
     def new  
         @category = Category.new
     end
@@ -26,6 +27,12 @@ class CategoriesController < ApplicationController
 
     def category_params
         params.require(:category).permit(:name)
+    end
+
+    def checkAdmin
+        if !logged_in? || ( logged_in? && !current_user.admin?)
+            redirect_to categories_path
+        end
     end
 
 end
