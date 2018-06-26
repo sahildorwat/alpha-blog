@@ -1,0 +1,14 @@
+
+<div class="well col-xs-8 col-xs-offset-2">
+ 
+    <div class="category-action center"> 
+        <h2 align="center">name is : <%= @category.name%> </h2>
+
+        <%# <% if logged_in? && (current_user == @category.user || current_user.admin?)%> %>
+        <%= link_to 'edit this category' , edit_category_path(@category) ,class: "btn btn-sm btn-primary"  %>
+        <%# <%= link_to 'Delete this category' , category_path(@category) , method: :delete,  %>
+                        <%# data: { confirm: "are you sure? "},class: "btn btn-xs btn-danger"  %> %>
+        <%# <%end%> %>
+        <%= link_to 'View all categories', categories_path , class: "btn btn-sm btn-success" %>
+    </div>
+</div>
